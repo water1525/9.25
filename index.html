@@ -12,20 +12,28 @@
             height: 200px;
             background-color: lightblue;
         }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: lightseagreen;
+        }
     </style>
 </head>
 <body>
     
     <div class="box"></div>
+    <div class="box1"></div>
 
 </body>
 </html>
 <script>
 
     let o_box = document.querySelector('.box');
+    let o_box_1 = document.querySelector('.box1');
     let fn_random = () => parseInt(Math.random() * 255)
     o_box.onclick = function(){
         this.style.backgroundColor = `rgb(${fn_random()},${fn_random()},${fn_random()})`
+        o_box_1.style.backgroundColor  = `rgb(${fn_random()},${fn_random()},${fn_random()})`
         console.log(`rgb(${fn_random()},${fn_random()},${fn_random()})`)
     }
     
